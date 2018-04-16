@@ -11,5 +11,10 @@
     <script src=<%= htmlWebpackPlugin.options.path %>/tinymce4.7.5/tinymce.min.js></script>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <script>
+      if (window.Promise) {
+        document.writeln('<script src="<%= htmlWebpackPlugin.options.path %>/js/es6-promise.min.js"' + '>' + '<' + '/' + 'script>');
+      }
+    </script>
   </body>
 </html>
