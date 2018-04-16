@@ -3,7 +3,7 @@
     <el-form class="login-form" autoComplete="on" :model="loginForm" :rules="loginRules" ref="loginForm" label-position="left">
       <div class="title-container">
         <h3 class="title">{{$t('login.title')}}</h3>
-        <lang-select class="set-language"></lang-select>
+        <!-- <lang-select class="set-language"></lang-select> -->
       </div>
       <el-form-item prop="username">
         <span class="svg-container svg-container_login">
@@ -32,18 +32,7 @@
         <span style="margin-right:18px;">{{$t('login.username')}} : editor</span>
         <span>{{$t('login.password')}} : {{$t('login.any')}}</span>
       </div>
-
-      <el-button class="thirdparty-button" type="primary" @click="showDialog=true">{{$t('login.thirdparty')}}</el-button>
     </el-form>
-
-    <el-dialog :title="$t('login.thirdparty')" :visible.sync="showDialog" append-to-body>
-      {{$t('login.thirdpartyTips')}}
-      <br/>
-      <br/>
-      <br/>
-      <social-sign />
-    </el-dialog>
-
   </div>
 </template>
 
